@@ -1,0 +1,20 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<%= link_to "Return to Pictures", all_pictures_url %>
+
+		<h4>Edit the picture by filling out the form below.</h4>
+
+		<%= form_tag single_picture_url(@passed_id), :method => "put" do %>
+			<%= label_tag :url, "URL:" %>
+			<%= text_field_tag :url %>
+
+			<%= label_tag :title, "Title:" %>
+			<%= text_field_tag :title %>
+
+			<%= submit_tag "Update Picture"%>
+			<%= link_to "or Cancel", all_pictures_url %>
+		<% end %>
+	</body>
+</html>

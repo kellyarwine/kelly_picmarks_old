@@ -1,0 +1,15 @@
+<html>
+	<head>
+	</head>
+	<body>
+
+		<%= link_to "Back", all_pictures_url %>
+		| 
+		<%= link_to "Delete", single_picture_path(@single_picture["id"]), :method => :delete %> |
+		<%= link_to "Edit", update_form_path(@single_picture["id"]) %>
+		<h4><%= @single_picture["title"] %></h4>
+		<p>	
+			<%= image_tag @single_picture["url"] %>			
+		</p>
+	</body>
+</html>

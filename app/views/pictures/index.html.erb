@@ -1,0 +1,22 @@
+<html>
+	<head>
+	</head>
+	<body>
+
+<p><%= link_to "Add New Picture", new_picture_path %></p>
+
+		<h4>Here's my list of  pictures:</h4>
+
+		<ul>
+			<li>
+				<% @pictures.each do |each_picture| %>
+				<%= link_to (image_tag each_picture["url"]), single_picture_path(each_picture["id"]) %>
+				<p>	
+					<%= each_picture["title"] %>
+				</p>
+			</li>
+				<% end %>
+		</ul>
+
+	</body>
+</html>
